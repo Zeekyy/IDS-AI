@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDS Analyzer - Results</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Analysis Results</h1>
+        <h3>Malicious Lines:</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Line</th>
+                    <th>Protocol Type</th>
+                    <th>Service</th>
+                    <th>Num Failed Logins</th>
+                    <th>Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for line in malicious_lines %}
+                    <tr>
+                        <td>{{ line.line }}</td>
+                        <td>{{ line.protocol_type }}</td>
+                        <td>{{ line.service }}</td>
+                        <td>{{ line.num_failed_logins }}</td>
+                        <td>{{ line.count }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/" class="btn btn-primary mt-3">Analyze Another File</a>
+    </div>
+</body>
+</html>
