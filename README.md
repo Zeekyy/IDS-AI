@@ -32,8 +32,8 @@ The project consists of the following main components:
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/ids-machine-learning.git
-    cd IDS Machine Learning
+    git clone https://github.com/Zeekyy/IDS-AI.git
+    cd IDS-AI
     ```
 
 2. Install the required packages:
